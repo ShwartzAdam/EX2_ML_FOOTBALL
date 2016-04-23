@@ -6,6 +6,8 @@ output: html_document
 ---
 
 
+### Reuired Libaries
+
 ```{r cars}
 require(XML)
 require(RCurl)
@@ -13,11 +15,12 @@ require(plyr)
 require(gtools)
 ```
 
-## DATA FROM FOOTBALL DATA WEBSITD SPANISH LEAGUE 2014-15 
+### Data from football statistics website of spanish league 2014-15 & 2015-16
 
 
 ```{r pressure, echo=FALSE}
 fileURL <- "http://www.football-data.co.uk/mmz4281/1516/SP1.csv?accessType=DOWNLOAD"
 download.file(fileURL, destfile = "./fbData.csv", method = "curl")
+fileURLTwo <- "http://www.football-data.co.uk/mmz4281/1415/SP1.csv?accessType=DOWNLOAD"
+download.file(fileURLTwo, destfile = "./fbDataTwo.csv", method = "curl")
 ```
-
