@@ -1,30 +1,23 @@
 ---
 title: "Football_spLEAGUE"
-author: "AdamAndDaniel"
+author: "Adam Daniel"
 date: "April 23, 2016"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## R Markdown
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 ```{r cars}
-summary(cars)
+require(XML)
+require(RCurl)
+require(plyr)
+require(gtools)
 ```
 
-## Including Plots
+## DATA FROM FOOTBALL DATA WEBSITD SPANISH LEAGUE 2014-15 
 
-You can also embed plots, for example:
 
 ```{r pressure, echo=FALSE}
-plot(pressure)
+fileURL <- "http://www.football-data.co.uk/mmz4281/1516/SP1.csv?accessType=DOWNLOAD"
+download.file(fileURL, destfile = "./fbData.csv", method = "curl")
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
