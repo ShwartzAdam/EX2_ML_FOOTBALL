@@ -75,4 +75,11 @@ d <- density(listGames$colF)
 plot(d,main = "Full Time score ")
 ```
 
-image: ![](path/to/smallorb.png) 
+image: ![](Rplot02.png) 
+
+##Conclusions
+1. The home team usually wins the game, you can see in the density graph of final results the density on home team (2) is higher.
+2. Mostly in Halftime score , the home team leads and symmetrically have a similar chance of a draw. 
+This implies that the chances of the away team to lead in first half are significantly lower.
+
+Summary: Home teams have more confidence during the game and away team getting tie result on the first half is a good result for the next half of the game.
