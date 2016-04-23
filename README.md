@@ -48,13 +48,6 @@ footballDataTwo <- subset(footballDataTwo, select = -c(B365H : BbAvAHA))
 total <- rbind(footballData,footballDataTwo)
 ```
 
-### creating data frame with only teams name
-```{echo=FALSE}
-teamName <- subset(footballData,select=c(HomeTeam) )
-teamNameUni <- unique(teamName)
-head(teamNameUni)
-```
-
 ### adding cols to list games by zero -> tie , one -> away lead , two -> home lead
 ```{echo=FALSE}
 listGames <- subset(total,select=c(HomeTeam,AwayTeam,HTHG,FTHG,HTAG,FTAG))
