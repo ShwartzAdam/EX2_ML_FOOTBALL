@@ -1,8 +1,7 @@
 ---
-title: "Football_spLEAGUE"
-author: "Adam Daniel"
+title: "Football"
+author: "Adam & Daniel"
 date: "April 23, 2016"
-output: html_document
 ---
 
 
@@ -68,7 +67,7 @@ d <- density(listGames$colF)
 plot(d,main = "Full Time score ")
 ```
 
-image: ![](Rplot02.png) 
+![](Rplot02.png) 
 
 ##Conclusions
 1. The home team usually wins the game, you can see in the density graph of final results that the density on home team (2) is higher.
