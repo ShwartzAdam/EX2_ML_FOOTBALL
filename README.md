@@ -35,7 +35,7 @@ dateDownloaded
 footballData <- read.csv("./fbData.csv", sep = ",", header=TRUE)
 footballDataTwo <- read.csv("./fbDataTwo.csv", sep = ",", header=TRUE)
 ```
-### Subset which cutting the unnessecery cols 
+### Subset which cutting the unnessecery cols with -c 
 
 ```{echo=FALSE}
 footballData <- subset(footballData, select = -c(B365H : BbAvAHA))
@@ -47,7 +47,7 @@ footballDataTwo <- subset(footballDataTwo, select = -c(B365H : BbAvAHA))
 total <- rbind(footballData,footballDataTwo)
 ```
 
-### adding cols to list games by zero -> tie , one -> away lead , two -> home lead
+### adding cols to list games( zero -> tie , one -> away lead , two -> home lead )
 ```{echo=FALSE}
 listGames <- subset(total,select=c(HomeTeam,AwayTeam,HTHG,FTHG,HTAG,FTAG))
 listH <- listGames$HTHG - listGames$HTAG
